@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width= device-width ,initial-scale=1.0">
+  <title>Account</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <img src="images/logo2.png" alt="image not found" height="100px" width="250px" margin:0;padding:0>
+
+      </div>
+      <nav>
+
+        <ul id="menu_items">
+
+          <!--nbsp to add a space-->
+          <li><a href="index.html">Home &nbsp</a></li>
+          <li><a href="product.html">Products &nbsp</a></li>
+
+          <li><a href="account.html">Account &nbsp</a></li>
+        </ul>
+      </nav>
+    <a href="cart.html"><img src="images/cart.png" alt="Image not found" height="30px" width="30px"></a>
+      <img src="images/menu.png" class="menu" onclick="menutoggle()" alt="Image not found">
+
+
+
+    </div>
+  </div>
+
+<!--Account-->
+
+<div class="account_page">
+  <div class="container">
+    <div class="row">
+      <div class="col_2">
+        <img src="images/pic1.jpg" width="500px" height="400px" alt="">
+      </div>
+      <div class="col_2">
+        <div class="form_container">
+          <div class="form_btn">
+            <span onclick="login()">Login</span>
+            <span onclick="register()">Register</span>
+            <hr id="Indicate">
+          </div>
+          <form id="LoginForm">
+            <input type="text" name="" value="" placeholder="Username" required>
+            <input type="password" name="" value="" placeholder="password" required>
+            <button type="submit" class="btn">Login</button>
+            <br>
+            <a href="">Forgot Password</a>
+          </form>
+          <form id="RegForm">
+            <input type="text" name="" value="" placeholder="Username" required>
+            <input type="email" name="" value="" placeholder="email" required>
+            <input type="password" name="" value="" placeholder="password" required>
+            <button type="submit" class="btn">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--footer-->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="footer_column_2">
+          <p>Download App for Android and iOS Mobile Phone</p>
+          <div class="app_logo">
+            <img src="images/play-store.png" alt="">
+            <img src="images/app-store.png" alt="">
+
+          </div>
+
+        </div>
+        <br><br>
+        <div class="footer_column_3">
+          <h2>Useful Links</h2>
+          <br>
+          <ul>
+            <li><a href="www.google.com">Coupons</a></li>
+            <li><a href="www.google.com">Blog Posts</a></li>
+            <li><a href="www.google.com">Return Policy</a></li>
+            <li><a href="www.google.com">Join Affiliates</a></li>
+          </ul>
+        </div>
+        <div class="footer_column_4">
+
+
+          <h2> Follow Us </h2>
+          <br>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=nP-nMZpLM1A">Youtube</a></li>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://twitter.com/i/flow/login">Twitter</a></li>
+            <li><a href="https://www.google.com/search?q=ig+login&rlz=1C1CHBF_enIN918IN918&oq=ig+login&aqs=chrome..69i57j0i20i263i512j0i131i433i512j0i512l3j69i60l2.7692j0j4&sourceid=chrome&ie=UTF-8">Instagram</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+      <br><br>
+      <p class="copy">©️ Copyright 2022 Fashion_House</p>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--toggle menu-->
+    <script>
+      var menu_items = document.getElementById("menu_items");
+      menu_items.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (menu_items.style.maxHeight == "0px") {
+          menu_items.style.maxHeight = "200px";
+        } else {
+          menu_items.style.maxHeight = "0px";
+        }
+      }
+    </script>
+
+    <!-- Account-->
+
+    <script>
+
+      var LoginForm=document.getElementById("LoginForm");
+      var RegForm = document.getElementById("RegForm");
+      var Indicate= document.getElementById("Indicate");
+
+      function register(){
+        RegForm.style.transform="translateX(0px)";
+        LoginForm.style.transform="translateX(0px)";
+        Indicate.style.transform="translateX(100px)";
+      }
+
+      function login(){
+        RegForm.style.transform="translateX(300px)";
+        LoginForm.style.transform="translateX(300px)";
+        Indicate.style.transform="translateX(0px)";
+      }
+
+    </script>
+
+</body>
+
+</html>
